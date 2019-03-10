@@ -1,0 +1,150 @@
+// Textos
+abbr, acronym, dfn
+	border-bottom 1px dotted $gris_fuerte
+	cursor help
+
+address
+	display block
+	font-style italic
+	margin 0 0 1em
+
+cite, em, i
+	font-style italic
+
+ins
+	background $verde_claro
+
+p
+	line-height 1.5em
+	margin-bottom 0.9em
+
+pre
+	background-color $blanco
+	border 1px solid $gris
+	border-radius 0.25em
+	box-shadow 0px 0px 100px $gris inset
+	color $negro_puro
+	margin-bottom 1em
+	padding 1em
+	overflow auto
+
+pre, code, kbd, var, samp, tt
+	font-family Courier, monospace
+	line-height 1.5em
+	white-space_pre-wrap()
+	word-wrap break-word
+
+strong, b
+	font-family $baseHeadingFont
+	font-weight bold
+
+
+// Blockuotes y citas
+blockquote, cite
+	font-family $baseFontItalic
+	font-style italic
+	letter-spacing 0.05em
+	position relative
+	text-align right
+
+blockquote
+	background-color $blanco_puro
+	border 1px dashed $silver
+	border-right 8px solid $verde_claro
+	color $negro
+	font-size 1.2em
+	margin-bottom 0.9em
+	padding 1em 1em 1em 2em
+	quotes "\201C""\201D""\2018""\2019"
+	&:before
+		content '\e605'
+		color $gris
+		font-family $iconFont
+		font-size 40px
+		font-style normal
+		font-variant normal
+		font-weight normal
+		left 10px
+		line-height 1
+		position absolute
+		speak none
+		text-transform none
+		top 0
+		-webkit-font-smoothing antialiased
+		-moz-osx-font-smoothing grayscale
+
+blockquote em, blockquote i, blockquote cite
+	font-style normal
+
+blockquote cite
+	color $negro_suave
+	font-size 0.8em
+	font-weight lighter
+	letter-spacing 0.05em
+	text-transform uppercase
+
+cite
+	color $negro_puro
+	&:after
+	&:before
+		content '\"'
+		display inline-block
+		font-family serif
+		margin 0 0.25em
+
+iframe
+	border none
+
+/*
+// Tipos de archivos adjuntos
+.contenido
+	a[href^="http://"]
+	a[href^="mailto:"]
+	a[href$=".pdf"]
+	a[href$=".doc"]
+	a[href$=".docx"]
+	a[href$=".xls"]
+	a[href$=".xlsx"]
+	a[href$=".jpg"]
+	a[href$=".jpeg"]
+	a[href$=".png"]
+		&:before
+			color $google
+			display inline
+			font-family $iconFont
+			font-style normal
+			font-weight normal
+			font-variant normal
+			line-height 1
+			padding-left 0.5em
+			padding-right 0.2em
+			speak none
+			text-transform none
+			-webkit-font-smoothing antialiased
+			-moz-osx-font-smoothing grayscale
+
+	// external links
+	a[href^="http://"]
+		&:before
+			content "\e9cb"
+
+	// emails
+	a[href^="mailto:"]
+		&:before
+			content "\e602"
+
+	// pdfs
+	a[href$=".pdf"]
+		&:before
+			content "\eada"
+
+	a[href$=".xls"]
+	a[href$=".xlsx"]
+		&:before
+			content "\eadd"
+
+	a[href$=".doc"]
+	a[href$=".docx"]
+		&:before
+			content "\eadc"
+*/

@@ -1,0 +1,125 @@
+// Slider
+
+// Barra de progreso
+.progress
+	background $ladrillo
+	height 2px
+.progress--contenedor
+	background $silver
+
+/* pager */
+.cycle-pager
+	overflow hidden
+	position absolute
+	text-align center
+	top 10px
+	width 100%
+	z-index 500
+
+	span
+		color #ddd
+		cursor pointer
+		display inline-block
+		font-family arial
+		font-size 50px
+		height 16px
+		width 16px
+
+	span.cycle-pager-active
+		color #D69746
+
+.cycle-pager > *
+	cursor pointer
+
+
+/* caption */
+.cycle-caption
+	bottom 15px
+	color white
+	position absolute
+	right 15px
+	z-index 700
+
+
+/* overlay */
+.cycle-overlay
+	background black
+	bottom 0
+	color white
+	font-family tahoma, arial
+	opacity .5
+	padding 15px
+	position absolute
+	width 100%
+	z-index 600
+
+
+/* prev / next links */
+.cycle-next
+.cycle-prev
+	cursor pointer
+	height 100%
+	opacity 0
+	position absolute
+	top 0
+	transition_comun()
+	width 15%
+	z-index 800
+.cycle-slideshow
+	&:hover
+		.cycle-next
+		.cycle-prev
+			opacity 0.4
+@media all and (min-width:720px)
+	.cycle-next
+	.cycle-prev
+		max-width 100px
+		// width 20%
+
+.cycle-prev
+	background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAA3NCSVQICAjb4U/gAAABFFBMVEX///+MjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJLS0uMjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJaWlpSUlJra2taWlpSUlKEhIR7e3tzc3NmZmZSUlJ7e3tzc3Nra2tmZmZaWlpSUlJ7e3tzc3NmZmZaWlpSUlJ7e3tzc3Nra2taWlpSUlJ7e3tra2tmZmZaWlpSUlJ7e3tzc3NmZmZLS0t7e3tzc3NmZmZaWlpSUlJ7e3tzc3NmZmZaWlpSUlJLS0tzc3Nra2tmZmZaWlpSUlJLS0v////29vbl5eXe3t7X19fMzMzFxcW9vb21tbWtra2lpaWZmZmUlJSMjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJLS0su+k6uAAAAXHRSTlMAERERERERERERIiIiIiIiIiIzM1VVVWZmZmZmd3d3d3d3iIiIiIiZmZmZmaqqqqqqu7u7u8zMzMzM3d3d3d3d7u7u7u7u/////////////////////////////3EjUs8AAAAJcEhZcwAACusAAArrAYKLDVoAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAACgUlEQVRIidWUaUPTQBCG4wEeiOBdFEW86oGWKtRyVJAjoG2avXcT////cCa7m2x6ftX38/PszM5OEkX/Q5Yazfbu/v5uu9m4M5++st5RkjNGGeNC6s7zazPxq81jQUmaEgyllAn18/UM5cmxANoGeIbh6mRt2vFbkg6LpAT6wUgINPZ5YRJ/uyNSi1POuVLKCRD9fYKxdMCRToaIczWMB8oJ4OrD62P9dJBPkhS6Bj6N41hUghqvsYX9JAnBa3KJfMwCQZkvdb4hCfLU8gT5mIaCNg9rDR0zbMgO0vExqQuni4HwSmJDxPLU8qMVzJuwAAUhxfEwyRwf+6kWPAhBiXWZgoDj4aLk01oBMLKnpbDLQSAFzz2fiFHBdMs3UxSEOj8QYUdWyFaqmcKyIS8m81pb4ZETmiiwkO/jFwEhNlRY4a0T2oKQFI+8iKckEXjprFXeGU6ZxccXDM7PMn/rA45V1eVUHh6xEHqBwGYLpCZ04A7wxfO5gm/pq6SEy1nGL458een3itJi6uVaXKaw68nApt8f2ALlWNcUs0K5qPFvJoMoUwj5Yycsa+6E0FB+J+DJbIF81S/ToWT+B0FKgwZLYYW9cltfaJiqLS4qg2ld4/PNUlg2giuXykjq52fnN6pP7oMuBSVSX0I43BX4FHzTyydu7wtj6GbLTcDXCkTRhqkE7QwQAj5/FtXyzUDHfiwicc8b8Dt1Plro6SA8qQTLH90aEaK7p6YSDB/glDwO/L1RPopWeiYYPPyahceBXx3no2ixm5kwmU++c3MSj7M6Haez/HxzCo5ttbIshAH/sz2xnUr5eBbQ+dG7Cbcdzf2XrW7v7OzH3vbmg/n0P5C/BZyurMM48moAAAAASUVORK5CYII=") 50% 50% no-repeat
+	left 0
+
+.cycle-next
+	background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAA3NCSVQICAjb4U/gAAABF1BMVEX///+MjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJLS0uMjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJaWlpSUlJra2taWlpSUlKEhIR7e3tzc3NmZmZSUlJ7e3tzc3Nra2tmZmZaWlpSUlJ7e3tzc3NmZmZaWlpSUlJ7e3tzc3Nra2taWlpSUlJ7e3tra2tmZmZaWlpSUlJ7e3tzc3NmZmZLS0t7e3tzc3NmZmZaWlpSUlJ7e3tzc3NmZmZaWlpSUlJLS0tzc3Nra2tmZmZaWlpSUlJLS0v////4+Pju7u7m5ubf39/V1dXMzMzFxcW9vb21tbWtra2lpaWZmZmUlJSMjIyEhIR7e3tzc3Nra2tmZmZaWlpSUlJLS0v5BQ0NAAAAXXRSTlMAERERERERERERIiIiIiIiIiIzM1VVVWZmZmZmd3d3d3d3iIiIiIiZmZmZmaqqqqqqu7u7u8zMzMzM3d3d3d3d7u7u7u7u///////////////////////////////0qvxzAAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAAnxJREFUSInVk2lj0kAQhuPRelRsvanWAy88qhQVpAcWC02BtpC9sxv//+9wNtndbCDAV30/P09mZjMTBP9DNqr1ZuvgoNWsV++spq/stAWnhGBCKONx+/m1pfjVeo9hFEVIB2NMmPj9ZonypMeAzgI80aHiZHvR53c5nqaJEPSjwyHQ2Je1Mv52m0UZjikTglsBEv8sMTYOqaYnU0wpFeOQcisIIeKj63P9tDU/mUTQNWUoDFPDCmK+xq7uZzJBJBWmYWY4QcivRb7KkeZxylM2CTMjF2L5sNBQj+iG0ofMhZD4Qn/dE15z3RAyvGnJGkaQb/0CGISI2jAaekbKg+CV2OERCMQJlF9YA5sCYKinTmhREFDOw28+N8IZ5laQHffPBAahwDM2LhipoDbzN4VlK/KegbjmtfDICHUtEMqFXjWIluC5PMMI74zQZAhFjJNwQTJDKtVwM8O5MDFaJIAhNK/s1IcgYCbOFgrhEEstdD2BLBVCVBDaMANd1lJ4SaXf0jeOEWxmtIp3Q38QGOvVh870+es917E/O7wgMhPss24Lgu35ulBX8BwmToXksREqMZ0VhNvwnFfJll2mI07YDJ9/H0kr7LttfRHDqzoYwpHlxzmf1JxQkYwKP2Q4z6vTG/nJfYyLgi0wyviswGfvpisn5nRNzASjSJYXCIKXskQYRXHOJ8+CQr5LuJLstCCpMCzwP4p8sNaNvaA5/vjWjBDc7UvHSzKyvDL8vVk+CDa71pAyRpcpryy/Nc8HwXpHSReR49D/zTJev1XfCcolOa0twHVbDaV8GPA/e6Xt5MqngUcnx+9Lpp3N/VeNTncw+LW/V3uwmv4H8hdt9LIzyi5hTwAAAABJRU5ErkJggg==") 50% 50% no-repeat
+	right 0
+.cycle-slideshow
+	.cycle-prev
+	.cycle-next
+		&:hover
+			opacity 1
+
+.disabled
+	opacity 0.5
+
+
+/* display paused text on top of paused slideshow */
+.cycle-paused
+	transition_comun()
+	&:after
+		background black
+		border-radius 10px
+		content 'Pausado'
+		color white
+		opacity 0.5
+		padding 10px
+		position absolute
+		right 10px
+		top 10px
+		z-index 500
+
+/*
+	media queries
+	some style overrides to make things more pleasant on mobile devices
+*/
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+	.cycle-caption
+		bottom 4px
+		right 4px
+
+	.cycle-overlay
+		padding 4px
+
+	// .cycle-slideshow
+	// 	width 200px

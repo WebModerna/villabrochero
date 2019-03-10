@@ -1,0 +1,125 @@
+// Portfolio en la Home
+.home--section
+	// overflow hidden
+	padding-left 10px
+	&--article
+		display inline-block
+		position relative
+		white-space normal !important
+		vertical-align top
+		width 100%
+	&--img
+		position relative
+		width 100%
+		img
+			display block
+			width 100%
+
+	&--lista
+		left 0
+		overflow hidden
+		position absolute
+		height 100%
+		top 0
+		width 100%
+		ul
+			background blanco
+			background rgba($blanco_puro, 0.8)
+			filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#ccffffff',GradientType=1 )")
+			bottom -100%
+			left 0
+			height 75%
+			margin 0
+			padding 0.5em
+			position absolute
+			list-style none
+			transition_comun()
+			width 100%
+			li
+				h4
+					margin 0
+.home--section
+	&--article
+		&:hover
+			ul
+				bottom 0
+.home--banners
+	overflow hidden
+	&--slide
+		font-family $baseHeadingFont
+		.figure
+			position relative
+			text-align center
+			width 100%
+			.figcaption
+				background url("../img/transparent_1x1.png")
+				background rgba($verde_claro, 0.8)
+				color $blanco
+				font-weight bold
+				font-size 0.7em
+				margin 0 auto
+				padding 0.5em
+				position absolute
+				text-transform uppercase
+				top 0
+				width 100%
+			img
+				display block
+				width 100% !important
+
+			.slide--descripcion
+				background url("../img/fancybox_overlay.png")
+				background rgba($blanco_puro, 0.8)
+				color $gris_fuerte
+				display inline
+				font-size 0.6em
+				left 0
+				position absolute
+				padding 0.5em
+				bottom 0
+				width 100%
+				a
+					color $ladrillo
+					z-index 950
+					&:hover
+						color $azul
+
+.desktop
+	display none
+
+@media all and (max-width:480px)
+	.home--banners
+		&--slide
+			.figure
+				.figcaption
+					font-size 0.6em
+					padding 0.8em
+				// .slide--descripcion
+				// 	display none
+
+@media all and (min-width:720px)
+	.home--banners
+		&--slide
+			.figure
+				.figcaption
+					font-size 1em
+					padding 1em
+					width auto
+				.slide--descripcion
+					font-size 1em
+					padding 1em
+					bottom 50%
+					left 10%
+					width auto
+
+@media all and (min-width:980px)
+	.home--section
+		margin auto 0.5em 0.5em 0.5em
+		&--article
+			margin-right 10px
+		&--lista
+			font-size 0.9em
+	.desktop
+		display block
+	.movil
+		display none

@@ -1,0 +1,35 @@
+// Las famosas miguitas de pan
+/*
+Un simple ejemplo
+<ul class="breadcrums">
+	<li class="breadcrums--label">Ud. está aquí: </li>
+	<li class="breadcrums-inicio"><a href="">Inicio</a></li>
+	<li><a href="">Medio</a></li>
+	<li><a href="">Final</a></li>
+	<li class="breadcrums-muted">Ya llegué</li>
+</ul>
+*/
+
+.breadcrums
+	display inline-block
+	font-family $baseHeadingFont
+	font-size 0.8em
+	list-style none
+	margin-top 0
+	padding 0.4em 0.3em
+	text-align left
+	li
+		color $gris
+		display inline-block
+		vertical-align middle
+		width auto
+	li + li:before
+		content "»"
+		display inline-block
+		margin auto 0.3em
+	.breadcrums--label
+		display inline
+	.breadcrums-inicio
+		&:before
+			content ""
+			margin-right 0

@@ -1,0 +1,37 @@
+// Contenido
+.main
+	background $blanco_puro
+	&--header
+		h1, h2
+			color $verde_claro
+			font-size 1em
+			font-weight lighter
+			margin 0.2em auto
+			padding 0
+			text-transform uppercase
+.contenido
+	padding-left 0.5em
+	padding-right 0.5em
+	text-align left
+
+@media all and (min-width: 980px)
+	.contenido
+		padding-left 1em
+		padding-right 1em
+		& > p
+			column-gap 1em
+			column-count 2
+		&--img
+			max-width 600px
+			margin 0 auto
+
+	.main
+		background $blanco_puro
+		border-radius 3px 3px 0 0
+		&--header
+			h1, h2
+				font-size 1.3em
+	.sidebar--main
+		.main
+			display table-cell
+			vertical-align top

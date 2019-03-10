@@ -1,0 +1,128 @@
+/* HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html
+	line-height 1.5
+
+::selection
+::-moz-selection
+	text-shadow none
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+	vertical-align middle
+
+.browserupgrade
+	background $google
+	color $blanco
+	margin 0.2em 0
+	padding 0.2em 0
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix
+	*zoom 1
+
+	&:before,
+	&:after
+		content " "
+		display table
+
+	&:after
+		clear both
+
+
+
+.hidden
+	display none !important
+	visibility hidden
+
+
+.invisible
+	visibility hidden
+
+
+.visuallyhidden
+	border 0
+	clip rect(0 0 0 0)
+	height 1px
+	margin -1px
+	overflow hidden
+	padding 0
+	position absolute
+	width 1px
+
+
+	&.focusable
+		&:active
+		&:focus
+			clip auto
+			height auto
+			margin 0
+			overflow visible
+			position static
+			width auto
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print
+	*,
+	*:before,
+	*:after
+		background transparent !important
+		color $negro !important
+		box-shadow none !important
+		text-shadow none !important
+
+	a,
+	a:visited
+		text-decoration underline
+
+
+	a[href]:after
+		content " (" attr(href) ")"
+
+
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after
+		content ""
+
+
+	abbr[title]:after
+		content " (" attr(title) ")"
+
+
+	blockquote,
+	pre
+		border 1px solid $gris
+		page-break-inside avoid
+
+	img
+		max-width 100% !important
+
+	img,
+	tr
+		page-break-inside avoid
+
+	h2,
+	h3,
+	p
+		orphans 3
+		widows 3
+
+
+	h2,
+	h3
+		page-break-after avoid
+
+	thead
+		display table-header-group

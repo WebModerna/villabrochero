@@ -1,0 +1,34 @@
+// Títulos en encabezadores
+h1, h2, h3, h4, h5, h6
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family $baseHeadingFont
+	a
+		text-decoration none
+hr
+	border 1px solid $blanco
+	height 0
+	margin 1.5em 0
+
+.header
+	background $verde_oscuro
+	overflow hidden
+	text-align left
+
+.contenido
+	.heading
+		background $amarillo
+		background rgba($amarillo, 0.5)
+		color $verde_claro
+		padding 0.2em 1em
+		&:before
+			content ""
+			display inline-block
+			triangle(0.5em, 0.5em, "right", $blanco_puro)
+			margin-right 0.5em
+
+@media all and (min-width:980px)
+	.header
+		background $silver_claro
+		display table
+		margin-top 1%
+		width 100%

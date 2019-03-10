@@ -1,0 +1,127 @@
+/*
+ * Productos
+ */
+.productos
+	text-align left
+	&--article + &--article
+		border-top 1px dotted $silver
+		margin-top 1em
+		padding-top 1em
+	&--lista
+		ul
+			margin 0
+			padding 0
+			list-style none
+			li
+				padding 0.2em 0.5em
+				h1
+				h4
+					color $verde_claro
+					font-size 1.1em
+					padding 0
+					margin 0
+					text-transform uppercase
+				span
+					color $verde_claro
+					display inline-block
+					font-weight bold
+					padding-right 1em
+			.nth-child-even
+				background $nube
+
+	&--img
+		margin 0 auto
+		padding 0
+		position relative
+		a
+			&:hover
+				opacity 0.7
+		img
+			width 100%
+		.bordes + .bordes
+			border-top 4px solid $blanco_puro
+
+
+		.datepicker
+			font-size 0.7em
+			margin 1em auto
+			text-align center
+			.ui-datepicker
+				display inline-block !important
+				margin 0 auto
+#slide-1
+	box-sizing border-box
+	margin 0 auto
+	position relative
+	width 100%
+	a
+		display block
+		width 100%
+		&:hover
+			// filter-grayscale(100%)
+			opacity 0.7 !important
+
+#slide-2
+	box-sizing border-box
+	margin 0.5em auto
+	width 100%
+	a
+		img
+			border-bottom 2px solid $gris_fuerte
+			border-left 1px solid $gris_fuerte
+			border-right 1px solid $gris_fuerte
+			border-top 2px solid $gris_fuerte
+			padding 4px
+		&:hover
+			// filter-grayscale(100%)
+			opacity 0.7 !important
+
+@media all and (max-width: 400px)
+	.productos
+		&--img
+			.datepicker
+				.ui-datepicker
+					display block
+					width 100%
+
+@media all and (min-width: 480px)
+	.productos
+		&--lista
+			ul
+				li
+					span
+						min-width 150px
+
+@media all and (min-width: 720px)
+	.productos
+		&--article + &--article
+			border-top none
+			margin-top auto
+			padding-top auto
+		&--article
+			display table
+			width 100%
+		&--img
+		&--lista
+			display table-cell
+			vertical-align top
+		&--img
+			max-width 400px
+			width 400px
+		&--img.movil
+			display none
+
+		.destacada
+			display none
+		&--lista
+			padding 0 0.5em
+			width calc(100% - 400px)
+			width -o-calc(100% - 400px)
+			width -ms-calc(100% - 400px)
+			width -moz-calc(100% - 400px)
+			width expression(100% - 400px)
+			width -webkit-calc(100% - 400px)
+
+#slide-1
+#slide-2
+	width 100%

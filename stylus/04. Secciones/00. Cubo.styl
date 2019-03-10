@@ -1,0 +1,71 @@
+/*
+ * CUBE
+ * Basic styles to display a 3D CSS cube
+<div class="shape-container">
+	<ul class="shape-cube animate-spin">
+		<li class="shape-cube__side shape-cube__side--front">
+		<li class="shape-cube__side shape-cube__side--back">
+		<li class="shape-cube__side shape-cube__side--top">
+		<li class="shape-cube__side shape-cube__side--bottom">
+		<li class="shape-cube__side shape-cube__side--left">
+		<li class="shape-cube__side shape-cube__side--right">
+	</ul>
+</div>
+*/
+
+$cube--color = #1abc9c
+$cube--width = 8em
+
+.shape-container
+	display inline-block
+	position relative
+	height $cube--width
+	perspective 500px
+	transform-origin 50% 50%
+	transform translate3d(0,0,0,0)
+	width $cube--width
+
+.shape-cube
+	height 100%
+	margin 0
+	padding 0
+	transform-style preserve-3d
+	width 100%
+
+	&__side
+		background-color darken($cube--color, 10%)
+		height $cube--width
+		list-style-type none
+		position absolute
+		width $cube--width
+
+		&--back
+			background-color darken($cube--color, 10%)
+			transform rotateX(180deg) translateZ($cube--width * 0.5)
+		&--bottom
+			background-color darken($cube--color, 40%)
+			transform rotateX(-90deg) translateZ($cube--width * 0.5)
+		&--front
+			background-color darken($cube--color, 10%)
+			transform rotateY(0deg) translateZ($cube--width * 0.5)
+		&--left
+			background-color darken($cube--color, 25%)
+			transform rotateY(-90deg) translateZ($cube--width * 0.5)
+		&--right
+			background-color darken($cube--color, 25%)
+			transform rotateY(90deg) translateZ($cube--width * 0.5)
+		&--top
+			background-color darken($cube--color, 40%)
+			transform rotateX(90deg) translateZ($cube--width * 0.5)
+
+.animate--spin
+	animation-name angle-spin
+	animation-duration 10s
+	animation-timing-function linear
+	animation-iteration-count infinite
+
+@keyframes angle-spin
+	0%
+		transform rotateZ(-50deg) rotateX(50deg) rotateY(-20deg)
+	100%
+		transform rotateZ(310deg) rotateX(-310deg) rotateY(340deg)

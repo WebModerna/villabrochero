@@ -1,0 +1,99 @@
+// Blog
+.blog
+	.heading
+		background $color_5
+		color $blanco
+		margin-bottom 1em
+	&--item
+		border 1px solid $blanco
+		border-radius 0.25em
+		margin-bottom 1em
+		padding 5px
+		figure
+			margin 0
+			position relative
+			img
+				display block
+				width 100%
+
+		&--content
+			color $gris
+			text-align left
+
+		&--nota
+			filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#9088aecc', endColorstr='#9088aecc',GradientType=1 )")
+			background rgba($color_8, 0.9)
+			left 0
+			min-width 80px
+			position absolute
+			top 0
+			&--fecha
+				color $blanco
+				text-align center
+				&-dia
+				&-mes
+				&-year
+					display block
+				&-dia
+					font-size 1.3em
+					border-bottom 2px solid $blanco_puro
+					font-family $baseHeadingFont
+				&-mes
+					font-size 1em
+					font-family $baseFont
+					font-family $baseFontItalic
+					font-style italic
+				&-year
+					font-size 0.7em
+
+		&--header
+			font-size 1.5em
+			border-bottom 5px solid $color_5
+			margin 0 0 5% 0
+			padding 3% 0
+			position relative
+			// text-align left
+			a
+				color $color_5
+				display block
+				&:after
+					background $nube
+					content ""
+					display block
+					height 100%
+					position absolute
+					right 0
+					top 0
+					transition all 0.2s ease-in-out
+					width 0
+					z-index -1
+				&:hover
+				&:focus
+					&:after
+						width 50%
+
+@media all and (min-width: 480px)
+	.blog
+		&--item
+			&--nota
+				min-width 100px
+				&--fecha
+					&-dia
+						font-size 2em
+
+@media all and (max-width: 960px)
+	.blog
+		&--item
+			padding 1%
+
+// Misceláneos
+.miscelaneos
+	background $blanco_puro
+	border-bottom 1px solid $blanco
+	font-size 0.8em
+	padding 1%
+	text-align center
+	div
+		color $color_8
+		display inline-block
+		padding 2%

@@ -1,0 +1,97 @@
+/*
+ * Funciones comunes y muy usuadas
+ */
+/*background-color-rgba( color, alpha)
+	background-color rgba(color, alpha)
+	filter progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000, endColorstr=#50990000)*/
+
+transition_comun()
+	transition all 0.3s ease-in-out
+
+box-shadow_lindo()
+	box-shadow 0px 1px 1px 0px rgba($blanco_puro, 0.5) inset, 0px -15px 15px 0px rgba($negro_puro, 0.25) inset
+	-o-box-shadow 0px 1px 1px 0px rgba($blanco_puro, 0.5) inset, 0px -15px 15px 0px rgba($negro_puro, 0.25) inset
+	-ms-box-shadow 0px 1px 1px 0px rgba($blanco_puro, 0.5) inset, 0px -15px 15px 0px rgba($negro_puro, 0.25) inset
+	-moz-box-shadow 0px 1px 1px 0px rgba($blanco_puro, 0.5) inset, 0px -15px 15px 0px rgba($negro_puro, 0.25) inset
+
+text-shadow_lindo()
+	text-shadow 0px -1px 0px rgba($negro_puro, 0.5)
+	-o-text-shadow 0px -1px 0px rgba($negro_puro, 0.5)
+	-ms-text-shadow 0px -1px 0px rgba($negro_puro, 0.5)
+	-moz-text-shadow 0px -1px 0px rgba($negro_puro, 0.5)
+	-webkit-text-shadow 0px -1px 0px rgba($negro_puro, 0.5)
+
+text-shadow_lindo_blanco()
+	text-shadow 0px -1px 0px rgba($blanco_puro, 0.5)
+	-o-text-shadow 0px -1px 0px rgba($blanco_puro, 0.5)
+	-ms-text-shadow 0px -1px 0px rgba($blanco_puro, 0.5)
+	-moz-text-shadow 0px -1px 0px rgba($blanco_puro, 0.5)
+	-webkit-text-shadow 0px -1px 0px rgba($blanco_puro, 0.5)
+
+background-size()
+	background-size arguments
+	-o-background-size arguments
+	-ms-background-size arguments
+	-moz-background-size arguments
+	-webkit-background-size arguments
+	-ms-behavior: url("js/backgroundsize.min.htc")
+
+white-space_pre-wrap()
+	white-space pre-wrap
+	white-space -o-pre-wrap
+	white-space -pre-wrap
+	white-space -moz-pre-wrap
+	white-space -webkit-pre-wrap
+/*
+grayscale ([ <number> | <percentage> ])
+invert ([ <number> | <percentage> ])
+sepia ([ <number> | <percentage> ])
+hue-rotate(<angle>)
+brightness ([ <number> | <percentage> ])
+contrast ([ <number> | <percentage> ])
+saturate ([ <number> | <percentage> ])
+drop-shadow (<length>{2,3} <color>?)
+url (<url>)
+saturate(150%) hue-rotate(45deg) blur(1px)
+*/
+filter-grayscale()
+	filter: url("data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/></filter></svg>#grayscale");
+	filter: gray;
+	filter: grayscale(arguments);
+	-o-filter: grayscale(arguments);
+	-ms-filter: grayscale(arguments);
+	-moz-filter: grayscale(arguments);
+	-webkit-filter: grayscale(arguments);
+
+// blur (<length>)
+filter-blur(numero)
+	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='blur5'><feGaussianBlur in='SourceGraphic' stdDeviation='"numero"' /></filter></svg>#blur5");
+	filter: unquote("progid:DXImageTransform.Microsoft.Blur(PixelRadius='") numero unquote("')");
+	filter: blur(numero px);
+	-o-filter: blur(numero  px);
+	-ms-filter: blur(numero px);
+	-moz-filter: blur(numero px);
+	-webkit-filter: blur(numero px);
+
+filter()
+	filter arguments
+	-o-filter: arguments
+	-ms-filter arguments
+	-moz-filter arguments
+	-webkit-filter arguments
+
+/**
+background-size_ie()
+	filter "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="arguments", sizingMethod='scale')"
+	-ms-filter "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="arguments", sizingMethod='scale')"
+ * Usage:
+ *
+ * $placeholder =
+ *   color red
+ *   background-color gray
+ *
+ * placeholder(input, $placeholder)
+placeholder( target, value )
+	for prefix, i in '::-webkit-input-placeholder' '::-moz-placeholder' ':-moz-placeholder' ':-ms-input-placeholder' '::-ms-input-placeholder' '::placeholder'
+	{ target }{ prefix } {{ value }}
+ */

@@ -1,0 +1,232 @@
+// Formularios lo más completo que se pueda.
+
+fieldset
+	border-color $silver_claro
+	border-radius 3px
+
+legend
+	color $silver
+	padding-left 1em
+	padding-right 1em
+
+form
+	margin-bottom 1em
+	text-align left
+	width 100%
+
+input[type="date"]
+input[type="email"]
+input[type="number"]
+input[type="tel"]
+input[type="text"]
+input[type="url"]
+input[type="search"]
+input[type="file"]
+textarea
+select
+	background-color $verde_claro
+	border 1px solid $gris
+	border-radius 0.25em
+	color $blanco_puro
+	display inline-block
+	height 2em
+	line-height 1.5em
+	margin-bottom 0.5em
+	padding 0.25em 0.5em
+	outline none
+	transition_comun()
+	vertical-align middle
+	&:focus
+		background $verde_oscuro
+
+input[type="file"]
+	cursor pointer
+
+::-webkit-file-upload-button
+	visbility hidden !important
+
+textarea
+	min-height 180px
+	resize none
+
+.wpcf7-form-control-wrap
+	display inline-block
+	vertical-align middle
+
+/*input
+	$placeholder =
+		color $gris
+	placeholder("", $placeholder)*/
+
+
+.formulario--propiedades
+	label
+		float left
+	&-form
+		padding 5px 10px
+		label
+			width 40%
+		input[type="date"]
+		input[type="email"]
+		input[type="number"]
+		input[type="tel"]
+		input[type="text"]
+		input[type="url"]
+		input[type="file"]
+		textarea
+		select
+			width 60%
+
+.formulario
+	label
+		float left
+		padding-right 1em
+	input[type="date"]
+	input[type="email"]
+	input[type="number"]
+	input[type="tel"]
+	input[type="text"]
+	input[type="url"]
+	input[type="search"]
+	input[type="file"]
+	textarea
+	select
+	.wpcf7-form-control-wrap
+		float right
+		width 100%
+	.codigo
+		display inline-block
+		float left
+		vertical-align top
+		width 100px !important
+
+.formulario--producto
+	display none
+	margin-top 1em
+	div
+		margin auto
+		overflow hidden
+		input[type="date"]
+		input[type="email"]
+		input[type="number"]
+		input[type="tel"]
+		input[type="text"]
+		input[type="url"]
+		input[type="file"]
+		textarea
+		select
+		.wpcf7-form-control-wrap
+			float right
+			width 100%
+		.codigo
+			display inline-block
+			float none !important
+			vertical-align top
+			width 100px !important
+	.respuesta
+		overflow visible
+
+#check
+	display none
+
+#check:checked ~ .formulario--producto
+	display block
+
+#label-check
+	float none
+	display block
+	padding-bottom 1em
+	padding-top 1em
+	margin-top 1em
+
+::-ms-input-placeholder
+	color $gris
+:-ms-input-placeholder
+	color $gris
+::-moz-placeholder
+	color $gris
+:-moz-placeholder
+	color $gris
+::placeholder
+	color $gris
+:placehoder
+	color $gris
+::-webkit-input-placeholder
+	color $gris
+
+
+.busqueda_codigo
+	diplay inline
+	display inline-block
+	max-width 120px !important
+	overflow hidden
+	vertical-align top
+	width 120px !important
+	button[type="submit"]
+	input[type="search"]
+	#codigo_producto
+		height 35px
+		padding 0
+		margin 0
+		box-sizing border-box
+	button[type="submit"]
+		background none
+		border none
+		border-radius 0
+		position absolute
+		right 0
+		top 0
+		width 40px
+		img
+			width 30px
+		&:hover
+			color $ladrillo
+	input[type="search"]
+	input#codigo_producto
+		display inline-block
+		max-width 120px !important
+		// min-width 130px !important
+		padding 2px 45px 2px 0.5em
+		// width 130px !important
+		min-width 120px
+
+@media all and (max-width:400px)
+	.formulario--propiedades
+		&-form
+			font-size 0.9em
+
+@media all and (min-width:480px)
+	#label-check
+		margin-left 10%
+		margin-right 10%
+
+@media all and (max-width:980px)
+	.formulario--propiedades
+		display none
+
+@media all and (min-width:720px)
+	.formulario
+		div
+			margin auto
+			overflow hidden
+			width 80%
+			input[type="date"]
+			input[type="email"]
+			input[type="number"]
+			input[type="tel"]
+			input[type="text"]
+			input[type="url"]
+			input[type="file"]
+			textarea
+			select
+			.wpcf7-form-control-wrap
+				float right
+				width 50%
+			.codigo
+				float left !important
+
+@media all and (min-width:980px)
+	.formulario--propiedades
+		background-color $blanco_puro
+		&-form
+			font-size 0.8em

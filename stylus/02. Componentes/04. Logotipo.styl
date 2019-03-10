@@ -1,0 +1,74 @@
+// Logotipo y header
+$color_letra = $blanco
+$fondo = $verde_oscuro
+
+.logotipo
+	display table
+	float left
+	margin 0
+	width 70%
+	&--header
+		color $color_letra
+		display table
+		font-size 12px
+		font-weight lighter
+		padding 0.2em
+		margin 0
+		text-transform uppercase
+		a
+			display table-cell
+			margin 0
+			padding 0
+			vertical-align middle
+			img
+				width 50px
+		span
+			display table-cell
+			vertical-align middle
+			padding-left 1em
+			padding-right 1em
+			letter-spacing -1px
+			text-align center
+			&::first-letter
+				font-size 15px
+
+@media all and (min-width:980px)
+	.logotipo
+		background-color rgb(0,100,78)
+		background url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDY0NGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMwMDQxMzQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=")
+		background -moz-radial-gradient(center, ellipse cover, rgba(0,100,78,1) 0%,rgba(0,65,52,1) 75%)
+		background -webkit-radial-gradient(center, ellipse cover, rgba(0,100,78,1) 0%,rgba(0,65,52,1) 75%)
+		background radial-gradient(ellipse at center, rgba(0,100,78,1) 0%,rgba(0,65,52,1) 75%)
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#00644e', endColorstr='#004134',GradientType=1 )")
+		border-radius 3px
+		display table-cell
+		float none
+		margin 0
+		text-align center
+		vertical-align top
+		width 250px
+
+		&--header
+			display table
+			position relative
+			width 100%
+			a
+				display block
+				margin-top 2em
+				vertical-align middle
+				&:hover
+					transform scale(1.1)
+				img
+					filter(drop-shadow(0px 0px 10px $blanco_puro))
+					animation agrandador 6s ease-in-out infinite
+			span
+				display block
+				color $blanco
+				color rgba($blanco_puro, 0.6)
+				height 50%
+				vertical-align middle
+				font-size 1em
+				letter-spacing 5px
+				&::first-letter
+					font-size 1.3em
+

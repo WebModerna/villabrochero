@@ -1,0 +1,128 @@
+// Botones
+button
+input[type="submit"]
+input[type="reset"]
+.boton
+.comment-reply-link
+.cancel-comment-reply a
+	background $verde_claro
+	*border 0
+	border 1px solid $gris
+	border-radius 0.25em
+	color $blanco_puro
+	cursor pointer
+	*display inline
+	display inline-block
+	font-family $baseHeadingFont
+	*line-height 1.5em
+	line-height 100%
+	*margin-right 0.3em
+	margin-right 0.1em
+	// min-width 9em
+	apareance none
+	overflow hidden
+	padding 0.6em 1.5em
+	text-align center
+	text-decoration none
+	text-transform uppercase
+	transition all 0.1s ease-in-out
+	white-space nowrap
+	&:hover
+		background $negro
+		color $blanco_puro
+	&:focus
+		// background $verde_claro
+		// color $blanco_puro
+		outline none
+	&:active
+		background $google
+		border-color $google
+		color $blanco_puro
+		transform scale(0.95)
+	&.small
+		font-size 0.8em
+		// padding 0.3em 1em
+	span
+		display inline-block
+
+[class^="boton-"], [class*=" boton-"]
+	color $blanco_puro
+	&:hover
+	&:focus
+		color $blanco_puro
+	&:active
+		background $google
+		border-color $google
+
+
+
+.boton-azul
+	background $azul
+	&:hover
+		background $google
+		border-color $google
+
+.boton-verde
+	background $verde_oscuro
+	&:hover
+		background $google
+		border-color $google
+
+.boton-negro
+	background $negro
+	&:hover
+		background $google
+		border-color $google
+.boton-rojo
+	background $ladrillo
+	&:hover
+		background $google
+		border-color $google
+
+// Comentarios
+// .boton.small
+.comment-reply-link
+.cancel-comment-reply a
+	border-color $gris
+	background $gris
+	font-size 0.8em
+	padding 0.3em 1em
+	min-width auto
+	&:hover
+	&:focus
+		background $silver
+		border-color $silver
+		color $blanco_puro
+	&:active
+		background $color_5
+		color $blanco_puro
+
+// Botón activado y actual
+[class^="actual"], [class*=" actual"]
+	background $gris_fuerte
+@keyframes agrandador {
+	0% {}
+	87% {
+		transform: scale(1);
+	}
+	90% {
+		transform: scale(1.05);
+	}
+	93% {
+		transform: scale(1);
+	}
+	96% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+#chusma
+	font-size 0.8em
+	margin 0.5em auto 0.3em auto
+	animation agrandador 6s ease-in-out infinite
+
+@media all and (min-width: 980px)
+	#chusma
+		display none

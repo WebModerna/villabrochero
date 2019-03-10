@@ -1,0 +1,38 @@
+//Go to top
+.gotop
+	background rgba($negro_puro, 0.5)
+	// filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e0bf12', endColorstr='#80e0bf12',GradientType=1 )")
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=1 )")
+	border-radius 3px
+	bottom 0
+	display inline-block
+	height 2em
+	padding 0 0.5em
+	position fixed
+	right 0
+	text-align center
+	transition background 0.2s ease-in-out
+	width 2em
+	z-index 999
+	&:before
+		content ""
+		display inline-block
+		position relative
+		transition border-color 0.2s ease-in-out
+		triangle(1em, 1em, "top", $blanco_puro)
+		triangle(1em, 1em, "top", rgba($blanco_puro, 0.5))
+		top 0.4em
+	&:hover
+		background $negro_puro
+		filter none
+		&:before
+			triangle(1em, 1em, "top", $blanco_puro)
+
+@media all and (min-width:480px)
+	.gotop
+		bottom 0.5em
+		right 0.5em
+		width 2.5em
+@media print
+	.gotop
+		display none

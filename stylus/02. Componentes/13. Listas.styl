@@ -1,0 +1,39 @@
+// Listados
+ol
+	counter-reset li-counter
+	list-style-type none
+	list-style-type decimal !ie
+	margin 0
+	margin-left 2em
+	padding 0
+	li
+		border-left 4px solid $color_8
+		margin-bottom 1em
+		min-height 3em
+		padding-left 0.5em
+		position relative
+
+ol > li:before
+	color $color_8
+	content counter(li-counter)
+	counter-increment li-counter
+	font-size 2em
+	left -1.4em
+	line-height 1
+	font-weight bold
+	position absolute
+	text-align right
+	top 0
+	width 50px
+
+
+.commentlist
+	list-style none
+	padding-left 0
+	li
+		border 1px solid $blanco
+		border-radius 0.25em
+		display block
+		margin-bottom 1em
+		margin-top 1em
+		padding 0.5em

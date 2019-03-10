@@ -1,0 +1,38 @@
+// El menú de navegación. Precisamente el botón. La hamburguesa
+
+$color_del_menu ?= $blanco
+$color_del_menu_hover ?= $amarillo
+$color_del_menu_focus ?= $google
+$color_del_menu_active ?= $google
+
+.boton_menu
+	display inline-block
+	float right
+	margin 1em 0.5em 0 0
+
+.menu_barritas
+	a
+		display table
+		overflow hidden
+		text-decoration none
+		width 40px
+		span
+			background $color_del_menu
+			border-radius 1em
+			display block
+			height 3px
+			margin auto
+			width 100%
+		span + span
+			margin-top 0.4em
+
+		&:hover
+			span
+				background $color_del_menu_hover
+		&:active
+			span
+				background $color_del_menu_focus
+
+@media all and (min-width:980px)
+	.boton_menu
+		display none

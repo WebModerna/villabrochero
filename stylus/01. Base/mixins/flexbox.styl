@@ -1,0 +1,122 @@
+// Los famosos flexbox para hacer diseños más líquidos y que se adapten bien
+
+flexbox()
+	display -webkit-box
+	display -moz-box
+	display -ms-flexbox
+	display -webkit-flex
+	display box
+	display flex
+
+flexbox(inline)
+	display -webkit-box
+	display -moz-box
+	display -ms-inline-flexbox
+	display -webkit-flex
+	display box
+	display flex
+
+flex()
+	-webkit-box-flex arguments
+	-moz-box-flex arguments
+	-webkit-flex arguments
+	-ms-flex arguments
+	flex arguments
+
+flex-flow()
+	-webkit-box-flex-flow arguments
+	-moz-box-flex-flow arguments
+	-ms-flex-flow arguments
+	flex-flow arguments
+
+
+flex-direction()
+	// row | row-reverse | column | column-reverse
+	-webkit-flex-direction arguments
+	-moz-flex-direction arguments
+	-ms-flex-direction arguments
+	flex-direction arguments
+
+/*
+	justify-content: flex-start (default) | flex-end | center | space-around | space-between
+	-ms-flex-pack: start | end | center | justify; (IE10, no existe space-around, justify remplaza a space-between)
+	-webkit-justify-content (Safari)
+*/
+/* Distribución de los elementos en el main axis
+	flex-start: al inicio del main axis
+	flex-end: al final del main axis
+	center: al medio del main axis
+	space around: calcula el espacio libre y lo distribuye alrededor de los flex-items
+	space-between: calcula el espacio libre y lo distribute entre los flex-items
+*/
+justify-content(flex-start)
+	-ms-flex-pack start
+	-webkit-justify-content flex-start
+	justify-content flex-start
+
+justify-content(flex-end)
+	-ms-flex-pack end
+	-webkit-justify-content flex-end
+	justify-content flex-end
+
+justify-content(center)
+	-ms-flex-pack center
+	-webkit-justify-content center
+	justify-content center
+
+justify-content(space-around)
+	-ms-flex-pack space-around
+	-webkit-justify-content space-around
+	justify-content space-around
+
+justify-content(space-between)
+	-ms-flex-pack justify
+	-webkit-justify-content space-between
+	justify-content space-between
+
+
+
+/*
+align-items: stretch (default) | flex-start | flex-end | center | baseline
+  -ms-flex-align (IE10)
+  -webkit-align-items (Safari)
+*/
+/*
+Alineación de los elementos en el cross axis
+  stretch: los flexitems rellenan todo el espacio disponible en el cross axis (si no se ha definido su dimensión)
+  flex-start: al inicio del cross axis
+  flex-end: al final del cross axis
+  center: al medio del cross axis
+  baseline: toma como referencia la linea base del texto y los elementos inline (como imágenes)
+*/
+align-items()
+	align-items arguments
+	-ms-flex-align arguments
+	-webkit-align-items arguments
+
+
+/*
+align-self: auto (default) | flex-start | flex-end | center | baseline | stretch
+ -ms-flex-item-align (IE10)
+ -webkit-align-self (Safari)
+*/
+align-self()
+	align-self arguments
+	-ms-flex-item-align arguments
+	-webkit-align-self arguments
+
+
+// vertical
+flex-orient()
+	-webkit-box-orient arguments
+	-moz-box-orient arguments
+	-ms-box-orient arguments
+	-o-box-orient arguments
+	box-orient arguments
+
+order()
+	-webkit-box-ordinal-group arguments
+	-moz-box-ordinal-group arguments
+	-ms-flex-order arguments
+	-webkit-order arguments
+	order arguments

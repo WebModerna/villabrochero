@@ -1,0 +1,67 @@
+// Mensajes
+.mensajes
+	background $amarillo
+	box-shadow(2px 2px 5px $negro_puro)
+	border-radius 3px 0 0 0
+	color $verde_oscuro
+	font-family $baseHeadingFont
+	left -0.5em
+	letter-spacing 1px
+	height 1.5em
+	padding 0 0.5em
+	position absolute
+	top 1em
+	text-shadow_lindo_blanco()
+	text-transform uppercase
+	z-index 300
+	a
+		text-decoration none
+		color inherith
+	&:before
+		border 5px solid transparent
+		border-top-color $gris_fuerte
+		border-right-color $gris_fuerte
+		content ""
+		position absolute
+		bottom -10px
+		left 0
+	&:after
+		border 0.75em solid transparent
+		border-left-color $amarillo
+		content ""
+		display inline
+		position absolute
+		right -1.5em
+		top 0
+
+.reservado
+	background $verde_claro
+	color $blanco
+	&:after
+		border-left-color $verde_claro
+
+@media all and (max-width: 540px)
+	.cycle-slideshow--slide
+		.mensajes
+			display none
+
+#reserva
+	display none
+	text-align left
+
+@media all and (min-width: 720px)
+	#reserva
+		ol
+		ul
+			column-count 2
+			column-gap 2em
+
+.addthis
+	display inline-block
+	position absolute
+	right 0.2em
+	top -4px
+
+@media all and (min-width: 980px)
+	.addthis
+		top 1.9em
