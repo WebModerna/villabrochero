@@ -1,4 +1,4 @@
-<h2>Inmobiliaria Villa Brochero</h2>>
+<h2>Inmobiliaria Villa Brochero</h2>
 
 <h3>Plantilla WordPress de la web de la inmobiliaria Villabrochero</h3>
 
